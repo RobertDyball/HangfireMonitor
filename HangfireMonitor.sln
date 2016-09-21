@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3162B698-3615-439D-99F3-FAA4F1A78933}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		..\..\Code\aspnet\SignalR-Server\NuGet.config = ..\..\Code\aspnet\SignalR-Server\NuGet.config
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HangfireMonitor", "src\HangfireMonitor\HangfireMonitor.xproj", "{067DEE42-C9D4-4E0A-BD89-5DA9E855C6AC}"

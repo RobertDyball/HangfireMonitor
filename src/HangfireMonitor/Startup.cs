@@ -1,4 +1,5 @@
 ﻿using Hangfire;
+using HangfireMonitor.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,6 +28,11 @@ namespace HangfireMonitor
             string sConnectionString = Configuration.GetConnectionString("HangfireConnection");
             services.AddHangfire(x => x.UseSqlServerStorage(sConnectionString));
 
+            services.AddSignalR(options =>
+            {
+                options.Hubs.EnableDetailedErrors = true;
+            });
+
             // Add framework services.
             services.AddMvc();
         }
@@ -46,6 +52,12 @@ namespace HangfireMonitor
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseFileServer();
+
+            app.UseWebSockets();
+            app.UseSignalR<RawConnection>("/raw-connection");
+            app.UseSignalR();
 
             app.UseStaticFiles();
 
