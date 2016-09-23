@@ -8,7 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3162B698-3615-439D-99F3-FAA4F1A78933}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
-		..\..\Code\aspnet\SignalR-Server\NuGet.config = ..\..\Code\aspnet\SignalR-Server\NuGet.config
+		NuGet.config = NuGet.config
 		README.md = README.md
 	EndProjectSection
 EndProject
